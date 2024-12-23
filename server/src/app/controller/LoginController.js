@@ -40,6 +40,7 @@ exports.login = async (req, res) => {
         firstname: user.Firstname,
         lastname: user.Lastname,
         gender: user.Gender,
+        customerid:user.CustomerId
       },
       SECRET_KEY,
       { expiresIn: '1h' }
@@ -58,7 +59,8 @@ exports.login = async (req, res) => {
         address: user.Address,
         firstname: user.Firstname,
         lastname: user.Lastname,
-        gender: user.Gender,
+        gender: user.Gender, 
+        customerid:user.CustomerId
       },
     });
   } catch (error) {

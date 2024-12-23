@@ -12,6 +12,8 @@ const { getAllBrands, addBrand, deleteBrand, editBrand } = require("./src/app/co
 const { getAllProducts, addProduct, deleteProduct, getProductDetails, getProductSpecifications, searchProducts } = require("./src/app/controller/ProductController");
 const { getAllAccounts, getProfileAdmin,updateProfileAdmin,changePassword } = require("./src/app/controller/AccountController");
 const { login,register } = require("./src/app/controller/LoginController");
+const { addToCart, getCart, updateQuantity, removeFromCart } = require('./src/app/controller/CartController');
+const { getCheckoutData } = require('./src/app/controller/CheckoutController');
 
 
 app.use(cors({ origin: "http://localhost:3001", credentials: true })); 
@@ -29,7 +31,7 @@ app.put('/privatesite/profile/changepassword', authenticateJWT, changePassword);
 
 app.get("/privatesite/accountmanagement", authenticateJWT, getAllAccounts);
 // route
-app.get('/productdetail  s/:id', getProductDetails);
+app.get('/productdetails/:id', getProductDetails);
 app.get('/search', searchProducts);
 // Sản phẩm
 app.get("/privatesite/products", authenticateJWT,getAllProducts);
@@ -41,6 +43,20 @@ app.post("/privatesite/brands", authenticateJWT, addBrand);
 app.delete("/privatesite/brands/:id", authenticateJWT, deleteBrand);
 app.put("/privatesite/editbrand/:id", authenticateJWT, editBrand);
 
+//public site
+app.get('/products/:productId/specifications',getProductSpecifications)
+app.get('/products', getAllProducts);
+app.get('/brands', getAllBrands);
+
+//
+app.post('/cart/add', addToCart);
+app.get('/cart', getCart);
+app.post('/cart/update', updateQuantity);
+app.post('/cart/remove', removeFromCart);
+//
+app.post('/checkout',getCheckoutData);
+//
+app.get("")
 app.get("/", (req, res) => {
   res.json({ message: "Server đang chạy!" });
 });

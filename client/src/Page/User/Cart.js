@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaTrash } from "react-icons/fa";
 const Cart = () => {
+  
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -143,10 +144,24 @@ const Cart = () => {
                       <p className="cart_amount">{totalPrice.toLocaleString()} VNĐ</p>
                     </div>
                     <div className="checkout_btn">
-                      <a href="#" className="btn btn-md btn-pink">
-                        Tiếp tục thanh toán
-                      </a>
-                    </div>
+                    <a
+                      href="#"
+                      className="btn btn-md btn-pink"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const token = localStorage.getItem("token");
+                        if (token) {
+                          window.location.href = "/checkout"; // Đường dẫn đến trang checkout
+                        } else {
+                          alert("Bạn cần đăng nhập để tiếp tục thanh toán.");
+                          window.location.href = "/login"; // Đường dẫn đến trang đăng nhập
+                        }
+                      }}
+                    >
+                      Tiếp tục thanh toán
+                    </a>
+                  </div>
+
                   </div>
                 </div>
               </div>

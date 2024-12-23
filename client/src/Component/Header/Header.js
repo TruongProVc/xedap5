@@ -3,6 +3,11 @@ import { FaSearch, FaShoppingCart, FaTimes } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Header = () => {
+  function handleLogout() {
+    localStorage.removeItem("token"); // Xóa token khỏi localStorage
+    window.location.href = "/login"; // Chuyển hướng đến trang đăng nhập
+  }
+
   const [isSearchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -103,12 +108,24 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
+                      {/* Start User Info Section */}
                       <div className="user-info">
-                        <div className="user-avatar">
-                          <img src="/images/Sport.png" alt="User Avatar" />
-                          <span className="username">John Doe</span>
-                        </div>
+                      <div className="user-avatar">
+                        <img src="/images/Sport.png" alt="User Avatar" />
+                        <span className="username">John Doe</span>
                       </div>
+                      <div className="user-dropdown">
+                        <ul>
+                          <li>
+                            <a href="#">Profile</a>
+                          </li>
+                          <li>
+                            <a href="#" onClick={handleLogout}>Logout</a>  
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    {/* End User Info Section */}
                     </li>
                   </ul>
                 </div>

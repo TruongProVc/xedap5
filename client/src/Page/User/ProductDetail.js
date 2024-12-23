@@ -225,7 +225,167 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      {/* End Product Content Tab Section */}
+      {/* End Product Content Tab Section */}ư {/* Start Product Content Tab Section */}
+  <div className="product-details-content-tab-section section-top-gap-100">
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          <div
+            className="product-details-content-tab-wrapper"
+            data-aos="fade-up"
+            data-aos-delay={0}
+          >
+            {/* Start Product Details Tab Button */}
+            <ul className="nav tablist product-details-content-tab-btn d-flex justify-content-center">
+              <li>
+                <a
+                  className="nav-link active"
+                  data-bs-toggle="tab"
+                  href="#review"
+                >
+                  Reviews (1)
+                </a>
+              </li>
+            </ul>{" "}
+            {/* End Product Details Tab Button */}
+            {/* Start Product Details Tab Content */}
+            <div className="product-details-content-tab">
+              <div className="tab-content">
+                {/* Start Product Details Tab Content Singel */}
+                <div className="tab-pane active show" id="review">
+                  <div className="single-tab-content-item">
+                    {/* Start - Review Comment */}
+                    <ul className="comment">
+                      {/* Start - Review Comment list*/}
+                      <li className="comment-list">
+                        <div className="comment-wrapper">
+                          <div className="comment-content">
+                            <div className="comment-content-top">
+                              <div className="comment-content-left">
+                                <h6 className="comment-name">Kaedyn Fraser</h6>
+                                <ul className="review-star">
+                                  <li className="fill">
+                                    <i className="ion-android-star" />
+                                  </li>
+                                  <li className="fill">
+                                    <i className="ion-android-star" />
+                                  </li>
+                                  <li className="fill">
+                                    <i className="ion-android-star" />
+                                  </li>
+                                  <li className="fill">
+                                    <i className="ion-android-star" />
+                                  </li>
+                                  <li className="empty">
+                                    <i className="ion-android-star" />
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div className="para-content">
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Tempora inventore dolorem a
+                                unde modi iste odio amet, fugit fuga aliquam,
+                                voluptatem maiores animi dolor nulla magnam ea!
+                                Dignissimos aspernatur cumque nam quod sint
+                                provident modi alias culpa, inventore deserunt
+                                accusantium amet earum soluta consequatur quasi
+                                eum eius laboriosam, maiores praesentium
+                                explicabo enim dolores quaerat! Voluptas ad
+                                ullam quia odio sint sunt. Ipsam officia, saepe
+                                repellat.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>{" "}
+                      {/* End - Review Comment list*/}
+                      {/* Start - Review Comment list*/}
+                      <li className="comment-list">
+                        <div className="comment-wrapper">
+                          <div className="comment-content">
+                            <div className="comment-content-top">
+                              <div className="comment-content-left">
+                                <h6 className="comment-name">Kaedyn Fraser</h6>
+                                <ul className="review-star">
+                                  <li className="fill">
+                                    <i className="ion-android-star" />
+                                  </li>
+                                  <li className="fill">
+                                    <i className="ion-android-star" />
+                                  </li>
+                                  <li className="fill">
+                                    <i className="ion-android-star" />
+                                  </li>
+                                  <li className="fill">
+                                    <i className="ion-android-star" />
+                                  </li>
+                                  <li className="empty">
+                                    <i className="ion-android-star" />
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div className="para-content">
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Tempora inventore dolorem a
+                                unde modi iste odio amet.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>{" "}
+                      {/* End - Review Comment list*/}
+                    </ul>{" "}
+                    {/* End - Review Comment */}
+                    <div className="review-form">
+                      <div className="review-form-text-top">
+                        <h5>ADD A REVIEW</h5>
+                      </div>
+                      <form action="#" method="post">
+                        <div className="row">
+                          <div className="col-12">
+                            <div className="default-form-box">
+                              <label htmlFor="comment-review-text">
+                                Your review
+                                <span>*</span>
+                              </label>
+                              <textarea
+                                id="comment-review-text"
+                                placeholder="Write a review"
+                                required=""
+                                defaultValue={""}
+                              />
+                            </div>
+                          </div>
+                          <div className='checkout_btn'>
+                          <div className="col-12">
+                            <button
+                              className="btn btn-md btn-pink"
+                              type="submit"
+                            >
+                              Gửi
+                            </button>
+                          </div>
+                          </div>
+                         
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>{" "}
+                {/* End Product Details Tab Content Singel */}
+              </div>
+            </div>{" "}
+            {/* End Product Details Tab Content */}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>{" "}
+  {/* End Product Content Tab Section */}
     </>
   );
 };
